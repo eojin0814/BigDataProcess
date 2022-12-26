@@ -35,25 +35,6 @@ with open(sys.argv[1], "rt") as fp:
         trip = uber[3]
 
  
-
-        ofweek = dayofweek[datetime.date(int(day[2]), int(day[0]), int(day[1])).weekday()]
-
-        
-
-        region_day = region + "," + ofweek
-
-        if region in find[ofweek].keys():
-
-            vehicles = int(find[ofweek][region].split(',')[0]) + int(vehicle)
-
-            trips = int(find[ofweek][region].split(',')[1]) + int(trip)
-
-            find[ofweek][region] = str(vehicles) + "," + str(trips)
-
-        else :
-
-            find[ofweek][region] = vehicle + "," + trip
-
             
 
 print(find)
