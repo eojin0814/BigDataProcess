@@ -54,8 +54,8 @@ for k in range(1, 21):
     errorCount = 0
    
     for i in range(leng):
-        answer = int(testFileList[i].split('_')[0])
-        testData = getVector(testFileDirName + '/' + testFileList[i])
+        answer = int(testDigitsList[i].split('_')[0])
+        testData = getVector(testDigits + '/' + testDigitsList[i])
         classifiedResult = classify0(testData, matrix, labels, k)
        
         count += 1
